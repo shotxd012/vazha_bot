@@ -30,7 +30,7 @@ export const botConfig = {
   
   // Database settings
   database: {
-    uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/vazha_bot',
+    uri: process.env.MONGODB_URI || 'mongodb+srv://vazha:1234@cluster0.k1ozo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
     options: {
       useNewUrlParser: true,
       useUnifiedTopology: true

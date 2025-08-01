@@ -10,6 +10,9 @@ export const connectDatabase = async () => {
     return;
   }
 
+  console.log('Connecting with MONGODB_URI:', process.env.MONGODB_URI);
+  console.log('Connecting with botConfig.database.uri:', botConfig.database.uri);
+
   try {
     const connection = await mongoose.connect(botConfig.database.uri, {
       ...botConfig.database.options,
