@@ -1,0 +1,28 @@
+{
+  "name": "vazha-bot",
+  "version": "1.0.0",
+  "description": "An advanced Discord bot built with discord.js v14",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix"
+  },
+  "keywords": ["discord", "bot", "discord.js", "vazha"],
+  "author": "Vazha Bot Developer",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "mongoose": "^8.0.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "eslint": "^8.55.0"
+  },
+  "engines": {
+    "node": ">=16.9.0"
+  }
+} 
