@@ -21,10 +21,10 @@ export const botConfig = {
     enabled: true,
     interval: 30000, // 30 seconds
     activities: [
-      { name: 'servers', type: 3 }, // Watching
-      { name: 'users', type: 3 }, // Watching
-      { name: '!help for commands', type: 0 }, // Playing
-      { name: 'discord.js v14', type: 0 } // Playing
+      { name: '4', type: 3 }, // Watching
+      { name: '3', type: 3 }, // Watching
+      { name: '2', type: 0 }, // Playing
+      { name: '1', type: 0 } // Playing
     ]
   },
   

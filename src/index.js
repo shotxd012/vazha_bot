@@ -2,6 +2,10 @@ import { Client, GatewayIntentBits, Collection } from 'discord.js';
 import { config } from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+
+// Load environment variables from .env file
+config();
+
 import { connectDatabase } from './utils/database.js';
 import { logger } from './utils/logger.js';
 import { errorHandler } from './handlers/errorHandler.js';
