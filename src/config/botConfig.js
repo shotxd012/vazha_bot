@@ -26,17 +26,25 @@ export const botConfig = {
     enabled: true,
     interval: 30000, // 30 seconds
     activities: [
-      { name: 'servers', type: 3 }, // Watching
-      { name: 'users', type: 3 }, // Watching
-      { name: '!help for commands', type: 0 }, // Playing
-      { name: 'discord.js v14', type: 0 } // Playing
+      { name: '4', type: 3 }, // Watching
+      { name: '3', type: 3 }, // Watching
+      { name: '2', type: 0 }, // Playing
+      { name: '1', type: 0 } // Playing
     ]
   },
   
   // Database settings
   database: {
+<<<<<<< HEAD
     uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/vazha_bot',
     options: {}
+=======
+    uri: process.env.MONGODB_URI || 'mongodb+srv://vazha:1234@cluster0.k1ozo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+    options: {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    }
+>>>>>>> 4efebac8373e03c6aca083a326353f025234e356
   },
   
   // Error handling

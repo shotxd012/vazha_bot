@@ -1,5 +1,4 @@
 import { Client, GatewayIntentBits, Collection } from 'discord.js';
-import { config } from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { connectDatabase } from './utils/database.js';
@@ -8,9 +7,6 @@ import { errorHandler } from './handlers/errorHandler.js';
 import { loadEvents } from './handlers/eventHandler.js';
 import { loadCommands } from './handlers/commandHandler.js';
 import { botConfig } from './config/botConfig.js';
-
-// Load environment variables
-config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

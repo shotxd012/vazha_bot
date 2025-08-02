@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "node --require dotenv/config src/index.js",
+    "dev": "nodemon --exec node --require dotenv/config src/index.js",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix"
   },
@@ -20,7 +20,11 @@
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.14.1",
+<<<<<<< HEAD
     "dotenv": "^16.3.1",
+=======
+    "dotenv": "^16.6.1",
+>>>>>>> 4efebac8373e03c6aca083a326353f025234e356
     "mongoose": "^8.0.3",
     "winston": "^3.17.0"
   },
