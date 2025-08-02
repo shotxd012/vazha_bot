@@ -1,5 +1,6 @@
 import { readdir, readFile } from 'fs/promises';
 import { join, extname } from 'path';
+import { fileURLToPath } from 'url';
 import { REST, Routes } from 'discord.js';
 import { logger } from '../utils/logger.js';
 import { botConfig } from '../config/botConfig.js';
@@ -19,7 +20,8 @@ export const loadCommands = async (client, commandsPath) => {
         const filePath = join(folderPath, file);
         
         try {
-          const { default: command } = await import(filePath);
+          const fileUrl = `file://${filePath.replace(/\\/g, '/')}`;
+          const { default: command } = await import(fileUrl);
           
           if (!command.data || !command.execute) {
             logger.warn(`Command at ${filePath} is missing required properties`);

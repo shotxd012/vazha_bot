@@ -1,3 +1,8 @@
+import { config } from 'dotenv';
+
+// Load environment variables
+config();
+
 export const botConfig = {
   // Bot information
   name: 'Vazha Bot',
@@ -31,10 +36,7 @@ export const botConfig = {
   // Database settings
   database: {
     uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/vazha_bot',
-    options: {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    }
+    options: {}
   },
   
   // Error handling

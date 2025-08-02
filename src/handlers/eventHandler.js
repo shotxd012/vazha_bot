@@ -17,7 +17,8 @@ export const loadEvents = async (client, eventsPath) => {
         const filePath = join(folderPath, file);
         
         try {
-          const { default: event } = await import(filePath);
+          const fileUrl = `file://${filePath.replace(/\\/g, '/')}`;
+          const { default: event } = await import(fileUrl);
           
           if (!event.name || !event.execute) {
             logger.warn(`Event at ${filePath} is missing required properties`);
